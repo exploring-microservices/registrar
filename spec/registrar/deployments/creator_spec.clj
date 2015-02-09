@@ -1,10 +1,10 @@
-(ns registrar.deployment.creator-spec
+(ns registrar.deployments.creator-spec
   (:require [speclj.core :refer [context describe it
                                  should= should-not-be-nil]]
             [spec-helper :refer [with-transactions]]
-            [registrar.deployment.creator :refer :all]))
+            [registrar.deployments.creator :refer :all]))
 
-(describe "registrar.deployment.creator"
+(describe "registrar.deployments.creator"
   (with-transactions)
 
   (context "/create"

@@ -1,13 +1,13 @@
-(ns registrar.deployment.deployment-controller-spec
+(ns registrar.deployments.deployments-controller-spec
   (:require [speclj.core :refer [context describe it should= should-contain
                                  with-stubs stub should-have-invoked]]
             [ring.util.response :refer [get-header]]
             [ring.mock.request :refer [request body]]
-            [registrar.deployment.fetcher :as fetcher]
-            [registrar.deployment.creator :as creator]
-            [registrar.deployment.deployment-controller :refer :all]))
+            [registrar.deployments.fetcher :as fetcher]
+            [registrar.deployments.creator :as creator]
+            [registrar.deployments.deployments-controller :refer :all]))
 
-(describe "registrar.deployment.deployment-controller"
+(describe "registrar.deployments.deployments-controller"
   (with-stubs)
 
   (context "GET /"

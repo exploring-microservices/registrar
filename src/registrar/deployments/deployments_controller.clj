@@ -1,9 +1,9 @@
-(ns registrar.deployment.deployment-controller
+(ns registrar.deployments.deployments-controller
   (:require [liberator.core     :refer [resource]]
             [compojure.core     :refer [defroutes GET POST]]
             [clojure.walk       :refer [keywordize-keys]]
-            [registrar.deployment.fetcher :as fetcher]
-            [registrar.deployment.creator :as creator]))
+            [registrar.deployments.fetcher :as fetcher]
+            [registrar.deployments.creator :as creator]))
 
 (defroutes routes
   (GET "/" [] (resource

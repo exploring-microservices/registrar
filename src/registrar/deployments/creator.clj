@@ -1,4 +1,4 @@
-(ns registrar.deployment.creator
+(ns registrar.deployments.creator
   (:require [config.database]
             [korma.core :refer :all]))
 
