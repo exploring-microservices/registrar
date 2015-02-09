@@ -11,7 +11,11 @@
                  [org.clojure/clojure "1.6.0"]
                  [ragtime/ragtime.sql.files "0.3.8"]
                  [ring/ring-core "1.2.1"]
-                 [ring/ring-json "0.3.1"]]
+                 [ring/ring-json "0.3.1"]
+                 [log4j "1.2.15" :exclusions [javax.mail/mail
+                                              javax.jms/jms
+                                              com.sun.jdmk/jmxtools
+                                              com.sun.jmx/jmxri]]]
   :ring {:handler registrar.core/handler}
   :plugins [[speclj "3.1.0"]
             [lein-environ "1.0.0"]
