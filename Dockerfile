@@ -15,4 +15,6 @@ RUN mv "$(lein ring uberjar | sed -n 's/^Created \(.*standalone\.jar\)/\1/p')" a
 
 EXPOSE 3000
 
+RUN lein ragtime migrate
+
 CMD ["java", "-jar", "app-standalone.jar"]
