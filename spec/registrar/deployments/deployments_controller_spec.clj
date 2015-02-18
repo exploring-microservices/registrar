@@ -23,6 +23,19 @@
         (routes (request :get "/"))
         (should-have-invoked :fetch-all))))
 
+  (context "GET /:id"
+    (it "responds with status of 200 and application/json content-type"
+      (with-redefs [fetcher/fetch-by-id (constantly nil)]
+        (let [response (routes (request :get "/test-id"))
+              content-type (get-header response "content-type")]
+          (should= 200 (:status response))
+          (should-contain "application/json" content-type))))
+
+    (it "calls fetcher/fetch-by-id"
+      (with-redefs [fetcher/fetch-by-id (stub :fetch-by-id)]
+        (routes (request :get "/test-id"))
+        (should-have-invoked :fetch-by-id))))
+
   (context "POST /"
     (defn make-request [& params]
       (merge (request :post "/") {:params (first params)}))

@@ -4,3 +4,7 @@
 
 (defn fetch-all []
   (select :deployments))
+
+(defn fetch-by-id [id]
+  (first
+    (select :deployments (where {:id id}))))
