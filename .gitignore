@@ -2,7 +2,9 @@
 /lib
 /classes
 /checkouts
-/resources
+/log
+/resources/*
+!/resources/log4j.properties
 pom.xml
 *.jar
 *.class
