@@ -1,21 +1,21 @@
-/target
-/lib
-/classes
-/checkouts
-/log
-/resources/*
-!/resources/log4j.properties
-pom.xml
-*.jar
 *.class
+*.jar
+*.db
+*jar
 .lein-deps-sum
+.lein-env
 .lein-failures
-.lein-plugins
+.lein-plugins/
 .lein-repl-history
 .lobos_stash.clj
-*.mv.db
-*.trace.db
-.lein-env
+.nrepl-port
+/checkouts/
+/classes/
+/lib/
+/log/
+/target/
+pom.xml
+pom.xml.asc
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
