@@ -22,4 +22,7 @@
             [lein-ring "0.8.11"]
             [ragtime/ragtime.lein "0.3.8"]]
   :test-paths ["spec"]
-  :aliases {"spec" ["with-profile" "test" "spec"]})
+  :aliases {"spec" ["with-profile" "test" "spec"]
+            "db-migrate" ["ragtime" "migrate"]
+            "db-rollback" ["ragtime" "rollback"]
+            "db-reset" ["do" ["db-rollback"] ["db-migrate"]]})
