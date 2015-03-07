@@ -4,6 +4,7 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[com.h2database/h2 "1.4.185"]
+                 [com.novemberain/langohr "3.1.0"]
                  [compojure "1.1.3"]
                  [environ "1.0.0"]
                  [korma "0.3.0"]
