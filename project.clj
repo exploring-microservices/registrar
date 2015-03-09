@@ -10,6 +10,7 @@
                  [korma "0.3.0"]
                  [liberator "0.12.0"]
                  [org.clojure/clojure "1.6.0"]
+                 [org.clojure/data.json "0.2.6"]
                  [ragtime/ragtime.sql.files "0.3.8"]
                  [ring/ring-core "1.2.1"]
                  [ring/ring-json "0.3.1"]
