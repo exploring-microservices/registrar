@@ -7,4 +7,6 @@
 
 (defn fetch-by-id [id]
   (first
-    (select :deployments (where {:id id}))))
+    (select :deployments
+            (where {:id id})
+            (limit 1))))
